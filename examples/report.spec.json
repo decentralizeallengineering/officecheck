@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "description": "Quarterly report: structure, TOC, and no leaked customer name",
+  "checks": [
+    {"id": "opens", "type": "any.file_opens", "format": "docx"},
+    {"id": "intro", "type": "docx.has_heading", "text": "Introduction", "level": 1},
+    {"id": "sections", "type": "docx.heading_count", "min": 3},
+    {"id": "toc", "type": "docx.has_toc", "weight": 2},
+    {"id": "pricing-table", "type": "docx.has_table", "min_rows": 3, "header_contains": ["Name", "Price"]},
+    {"id": "no-draft", "type": "docx.not_contains_text", "text": "DRAFT", "scope": "all"},
+    {"id": "page-numbers", "type": "docx.footer_has_page_number"},
+    {"id": "pii", "type": "any.masked", "strings": ["Jane Q. Public", "555-01-2345"]}
+  ]
+}
