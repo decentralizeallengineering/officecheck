@@ -154,3 +154,10 @@ officecheck --print-schema > schema/spec.schema.json   # after changing a check'
 
 New check types register with `@officecheck.check("fmt.name", properties, required=...)`; the
 spec schema is assembled from the registry.
+
+## Related
+
+- [xlsxops](https://github.com/decentralizeallengineering/xlsxops): Excel operations for agents
+- [docxops](https://github.com/decentralizeallengineering/docxops): Word operations for agents
+- [pdfops](https://github.com/decentralizeallengineering/pdfops): PDF operations for agents
+- [all tools](https://github.com/decentralizeallengineering): the index of this account
